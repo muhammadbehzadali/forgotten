@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2', cursive;
+}
+
+body {
+    background-color: #0b0c2a;
+    box-sizing: border-box;
+    color: white;
+}
+
+.u1 {
+    margin: 0;
+    padding: 0;
+}
+
+.l1 {
+    margin: 0 20px;
+    font-size: 20px;
+    /* display: block; */
+    font-weight: 700;
+    transition: all, 0.5s;
+    padding: 24px;
+    color: white;
+}
+
+.nav-item .active {
+    background-color: #e53637;
+}
+
+.i {
+    height: 500px;
+}
+
+.box {
+    background: linear-gradient(to right, rgb(172, 21, 21), rgb(0, 89, 255));
+    color: white;
+    --width: 110px;
+    --height: calc(var(--width) / 4);
+    width: var(--width);
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    font-size: calc(var(--height) / 2.5);
+    font-family: sans-serif;
+    /* letter-spacing: 0.1em; */
+    border: 1px solid darkgoldenrod;
+    border-radius: 2em;
+    transform: perspective(500px) rotateY(-15deg);
+    text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.box:hover {
+    transform: perspective(500px) rotateY(15deg);
+    text-shadow: -6px 3px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: -2px 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, white, transparent);
+    left: -100%;
+    transition: 0.5s;
+}
+
+.box:hover::before {
+    left: 100%;
+}
+
+
+/* CSS used here will be applied after bootstrap.css */
+
+.ekko-lightbox-nav-overlay a {
+    color: goldenrod;
+}
+
+.gallery-title {
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 1px dotted orange;
+    margin-top: 1em;
+}
+
+.v {
+    width: 320px;
+    height: 240px;
+}
+
+.c1 {
+    width: 320px;
+    height: 240px;
+}
+
+.ie {
+    width: 100%;
+    height: 300px;
+}
+
+@media only screen and (max-width: 991px) {
+    .l1 {
+        display: inline;
+        font-size: 15px;
+        padding: 10px;
+    }
+    .nav-item .active {
+        background: none;
+    }
+    .nav-item {
+        margin-bottom: 10px;
+    }
+    .i {
+        height: 300px;
+    }
+    .v {
+        height: 150px;
+        width: 150px;
+    }
+    .c1 {
+        height: 150px;
+        width: 150px;
+    }
+    .ie {
+        height: 150px;
+    }
+}
